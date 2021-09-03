@@ -28,6 +28,7 @@ class MyTestCase(unittest.TestCase):
         cls.__buy_me.password_item()
         cls.__buy_me.confirm_password_item()
         cls.__buy_me.sign_up_item()
+        print("kjdflgdlkm")
         cls.__title = cls.__buy_me.getDriver().title
 
     def test_title(self):
