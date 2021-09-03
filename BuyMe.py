@@ -33,29 +33,16 @@ class BuyMe(object):
         chrome_options.add_argument("--start-maximized")
         self.__driver = webdriver.Chrome(options=chrome_options)
 
-    def register_sign_up_item(self):
+    def find_elements(self):
         self.__register_sign_up_item = self.__driver.find_element_by_css_selector("#ember957 > div > ul.nav-bar.buttons > li:nth-child(3) > a > span:nth-child(2)")
         self.__register_sign_up_item.click()
-
-    def register_item(self):
         self.__register_item = self.__driver.find_element_by_class_name("text-link")
         self.__register_item.click()
-
-    def name_item(self):
         self.__name_item = self.__driver.find_element_by_css_selector("input[placeholder = 'שם פרטי']")
-
-    def mail_item(self):
         self.__mail_item = self.__driver.find_element_by_css_selector("input[placeholder = 'מייל']")
-
-    def password_item(self):
         self.__password = self.__driver.find_element_by_css_selector("input[placeholder = 'סיסמה']")
-
-    def confirm_password_item(self):
         self.__confirm_password_item = self.__driver.find_element_by_css_selector("input[placeholder = 'אימות סיסמה']")
-
-    def sign_up_item(self):
         self.__sign_up_item = self.__driver.find_element_by_css_selector("button[gtm = 'הרשמה ל-BUYME']")
-        # self.__sign_up_item.click()
 
     def set_first_name(self, string):
         self.first_name = string
